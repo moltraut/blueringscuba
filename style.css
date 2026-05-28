@@ -118,6 +118,19 @@ body {
   margin: 0 auto;
 }
 
+.credit-card-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.card.credit-card {
+  max-width: 360px;
+  padding: 22px;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.95);
+}
+
 .card {
   background: white;
   padding: 30px;
