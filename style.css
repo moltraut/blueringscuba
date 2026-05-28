@@ -125,10 +125,12 @@ body {
 }
 
 .card.credit-card {
-  max-width: 360px;
-  padding: 22px;
-  font-size: 14px;
-  background: rgba(255, 255, 255, 0.95);
+  max-width: 180px;
+  padding: 18px;
+  font-size: 13px;
+  background: rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
 }
 
 .card {
