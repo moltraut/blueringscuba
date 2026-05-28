@@ -1,4 +1,5 @@
-@import '@fontsource/[ovo_5]/index.css';
+@import url('https://fonts.googleapis.com/css2?family=Ovo&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -6,8 +7,9 @@
 }
 
 body {
-  font-family: 'Ovo';
+  font-family: 'Ovo', serif;
 }
+
 
 /* NAVIGATION */
 .nav {
@@ -63,4 +65,356 @@ body {
   text-align: center;
   max-width: 900px;
   padding: 20px;
+}
+
+.hero-content {
+  text-align: center;
+}
+
+.hero p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 16px;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  text-transform: uppercase;
+  display: block;
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.offers {
+  padding: 80px 60px;
+  text-align: center;
+  background: #f8f8f8;
+}
+
+.offers h2 {
+  font-size: 32px;
+  margin-bottom: 50px;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.offer-backdrop {
+  background-image: url("offers-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 80px 20px;
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.offer-cards {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  width: max-content;
+  margin: 0 auto;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  max-width: 250px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #555;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* SMOOTH SCROLLING */
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+}
+
+/* EXPLORE SECTION – fills the full page width, big 2×2 grid */
+
+.explore-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 12px;
+  margin-bottom: 5px;
+  opacity: 0.6;
+}
+
+.explore-header h2 {
+  font-size: 32px;
+  letter-spacing: 2px;
+  font-weight: 300;
+}
+
+/* Grid uses full width of section – no max-width, cards fill the page */
+
+.explore-overlay h3 {
+  font-size: 32px;
+  letter-spacing: 2px;
+  margin-bottom: 50px;
+  font-weight: 300
+}
+
+.explore-overlay p {
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.explore-header {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.explore-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 12px;
+  margin-bottom: 20px;
+  opacity: 0.6;
+}
+
+.roatan {
+  background-image: url("roatan.jpg");
+}
+
+.cayman {
+  background-image: url("cayman.jpg");
+}
+
+.arenui {
+  background-image: url("arenui.jpg");
+}
+
+.philippines {  
+  background-image: url("philippines.jpg");
+}
+
+
+/* EXPLORE ITEMS */
+
+.explore-item:hover {
+  transform: scale(1.05);
+}
+
+
+/* DETAILS PANEL */
+
+.explore-details ul {
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.explore-details li {
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* ============================= */
+/* CLEAN FLIP CARD SYSTEM */
+/* ============================= */
+
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+}
+
+.explore-item.active .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+
+/* FRONT SIDE */
+.card-front {
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  padding: 30px;
+  color: white;
+  font-size: 28px;
+}
+
+/* BACK SIDE */
+.card-back {
+  color: white;
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
+}
+
+.card-back ul {
+  list-style: none;
+}
+
+.card-back li {
+  margin-bottom: 12px;
+}
+
+.roatan-back {
+  background-image: url("roatan-back.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.cayman-back {
+  background-image: url("cayman-back.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.arenui-back {
+  background-image: url("arenui-back.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.philippines-back {
+  background-image: url("philippines-back.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* ============================= */
+/* FINAL CLEAN EXPLORE SECTION */
+/* ============================= */
+.explore-section {
+  width: 100%;
+  padding: 80px 100px;   /* top/bottom match .offers (80px); side padding unchanged */
+  background: white;
+}
+
+.explore-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 80px;              /* THIS is what made them feel spaced */
+  max-width: 1200px;      /* keeps grid elegant */
+  margin: 0 auto;         /* centers it */
+}
+
+.explore-item {
+  width: 100%;
+  min-width: 0;
+  aspect-ratio: 1;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+}
+
+.explore-item.active .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+
+.card-front {
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  padding: 30px;
+  color: white;
+  font-size: 28px;
+}
+
+.card-back {
+  color: rgb(0, 1, 5);
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
+}
+
+.card-back ul {
+  list-style: none;
+  padding: 0;
+}
+
+.card-back li {
+  margin-bottom: 12px;
+}
+
+/* Card back images – higher specificity so they always show */
+.card-back.roatan-back {
+  background-image: url("roatan-back.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.card-back.cayman-back {
+  background-image: url("cayman-back.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.card-back.arenui-back {
+  background-image: url("arenui-back.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.card-back.philippines-back {
+  background-image: url("philippines-back.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Explore photo block (under explore cards) */
+
+.explore-photo-backdrop {
+  background-image: url("arenui-730.jpg");
+  background-repeat: no-repeat;
 }
